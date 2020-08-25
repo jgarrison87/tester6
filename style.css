@@ -128,10 +128,11 @@ body {
 .card-container .card p {
   width: 50%;
   margin: auto;
+  text-align: center;
 }
 
 .card-container .card p {
-  text-align: center;
+  margin: 20px auto;
 }
 
 .card-container .card img:hover {
@@ -274,11 +275,9 @@ footer .footer-social .email .btn {
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-footer .footer-social .email .btn i {
-  color: #fff;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .footer-social .email .btn:hover {
