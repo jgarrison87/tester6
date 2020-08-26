@@ -79,7 +79,7 @@ body {
   align-items: center;
   color: #fff;
   line-height: 1.2;
-  /* margin-top: 75px; */
+  margin-top: 75px;
 }
 
 .showcase .showcase-container h1 {
@@ -353,8 +353,8 @@ footer .copyright h2 {
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 100px;
+  right: 40px;
   font-size: 24px;
   color: #fff;
   font-weight: bold;
