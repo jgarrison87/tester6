@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.discount-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.discount-modal {
+  background: url("../img/discount-bg.jpg") no-repeat center center/cover;
+  width: 45%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+}
+
+.discount-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.discount-modal .discount-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.discount-modal h1 {
+  padding: 50px 0px 10px 0px;
+  text-align: center;
+  font-size: 40px;
+  z-index: 1;
+  color: #fff;
+}
+
+.discount-modal p {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.discount-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.discount-modal form input {
+  width: 400px;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.discount-modal form button {
+  width: 400px;
+  font-size: 14px;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  outline: none;
+  background-color: #131332;
+}
+
+.discount-modal form button:hover {
+  cursor: pointer;
+}
+
+.discount-modal-close {
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  top: 10px;
+  right: 15px;
+}

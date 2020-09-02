@@ -6,6 +6,7 @@
     <title>Tester 6</title>
     <!-- style sheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./forms/discount.css" />
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -47,15 +48,22 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#testimonials-container"
+              >What is Xyngular</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#products-container"
+              >Award Winning System</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Testimonials</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Sign-Up</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -73,7 +81,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
             <a
               class="nav-link disabled"
@@ -86,8 +94,9 @@
         </ul>
         <div class="challenge">
           <button class="challenge-btn">
-            Start my <span>8-</span>day challenge!
+            <a href="./forms/funnel.html">Get Started!</a>
           </button>
+          <p>Become your <em>OWN</em> boss today!</p>
         </div>
         <!-- <form class="form-inline my-2 my-lg-0">
           <input
@@ -113,7 +122,7 @@
     </section>
 
     <!-- carousel -->
-    <div class="testimonials-container">
+    <div id="testimonials-container" class="testimonials-container">
       <div
         id="carouselExampleIndicators"
         class="carousel slide"
@@ -172,8 +181,10 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div class="testimonials">
-        <h2>Share the health!</h2>
+      <div id="testimonials" class="testimonials">
+        <h2>
+          What is <em><strong>Xyngular?</strong></em>
+        </h2>
         <p>
           We’ve had many of our customers share their personal stories with us,
           and we want to hear how Xyngular products have changed your life, too!
@@ -185,9 +196,9 @@
     </div>
 
     <!-- products -->
-    <div class="products-container">
+    <div id="products-container" class="products-container">
       <div class="products-text">
-        <h2>Products</h2>
+        <h2>Award Winning System</h2>
         <p>
           Xyngular products help to support some of today's most common health
           needs. If you are looking to be more energized, slim down, or simply
@@ -220,7 +231,7 @@
       <div class="card">
         <img src="./img/card1.jpg" alt="" />
         <p>
-          <span><strong>Energy</strong></span>
+          <span><strong>Energy/Performance</strong></span>
           <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
@@ -274,8 +285,23 @@
           <small>Error message</small>
         </div> -->
         <button type="submit">Submit</button>
+        <span class="modal-close">X</span>
       </form>
-      <span class="modal-close">X</span>
+    </div>
+
+    <!-- discount modal -->
+    <div class="discount-container">
+      <div class="discount-modal">
+        <div class="discount-bg">
+          <h1>Save 10% on your first order!</h1>
+          <p>And <em>stay</em> up to date on future promotions.</p>
+          <form>
+            <input type="text" placeholder="Enter email" /><br />
+            <button type="submit">SIGN UP</button>
+          </form>
+          <span class="discount-modal-close">X</span>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->

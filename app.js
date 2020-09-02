@@ -7,19 +7,29 @@ const challengeBtn = document.querySelector(".challenge-btn");
 const modal = document.querySelector(".modal-container");
 const modalClose = document.querySelector(".modal-close");
 const showcaseBtn = document.querySelector(".showcase-btn");
+const discountContainer = document.querySelector(".discount-container");
+const discountCloseBtn = document.querySelector(".discount-modal-close");
 
 // show modal
+// window.addEventListener("scroll", () => {
+//   modal.classList.add("bg-active");
+// });
+
 challengeBtn.addEventListener("click", () => {
   modal.classList.add("bg-active");
 });
 
 showcaseBtn.addEventListener("click", () => {
-  modal.classList.add("bg-active");
+  discountContainer.classList.add("discount-active");
 });
 
 // close modal
 modalClose.addEventListener("click", () => {
   modal.classList.remove("bg-active");
+});
+
+discountCloseBtn.addEventListener("click", () => {
+  discountContainer.classList.remove("discount-active");
 });
 
 // Show input error message
