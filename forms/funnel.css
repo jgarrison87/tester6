@@ -47,3 +47,13 @@ li {
   padding: 40px 0px;
   font-size: 1.3rem;
 }
+
+/* form */
+form {
+  background-color: lightblue;
+  height: 300px;
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}

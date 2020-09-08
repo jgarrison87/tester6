@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 :root {
   --primary-color: #32e0c4;
@@ -32,10 +33,15 @@ html {
   background-color: transparent;
 }
 .navbar .navbar-brand {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-left: 40px;
 }
+
 .navbar .navbar-items ul {
   margin: auto;
 }
@@ -72,6 +78,8 @@ html {
 
 .navbar .challenge p {
   display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .navbar .nav-item a::after {
@@ -100,6 +108,8 @@ html {
   color: #000;
   font-size: 14px;
   font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* showcase */
@@ -175,6 +185,27 @@ html {
 .testimonials h2 {
   padding-bottom: 20px;
   border-bottom: 2px solid var(--color-3);
+}
+
+.testimonials .learn-btn {
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--color-3);
+  outline: none;
+  border: none;
+}
+
+.testimonials .learn-btn:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.testimonials .learn-btn a:visited {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 /* products */
