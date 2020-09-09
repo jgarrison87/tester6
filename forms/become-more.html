@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Become More</title>
     <link rel="stylesheet" href="become-more.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -42,7 +43,7 @@
 
     <section>
       <div class="count-me-in">
-        <div class="img-container">
+        <div class="img-container" data-aos="fade-left">
           <img src="../img/test10.jpg" alt="" />
         </div>
         <div class="count-me-in-text">
@@ -106,7 +107,7 @@
           </p>
           <button>Lets Get Started!</button>
         </div>
-        <div class="img-container">
+        <div class="img-container" data-aos="fade-right">
           <img src="../img/test11.jpg" alt="" />
         </div>
       </div>
@@ -198,5 +199,12 @@
     </footer>
 
     <script src="become-more.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 800,
+      });
+    </script>
   </body>
 </html>
