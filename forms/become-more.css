@@ -48,15 +48,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 800px;
-  color: #fff;
   font-size: 18px;
 }
 
-.navbar .nav-items:hover {
+.navbar .nav-items a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .nav-items a:hover {
   cursor: pointer;
 }
 
-.navbar .nav-items .nav-item:hover {
+.navbar .nav-items .nav-item a:hover {
   color: var(--color-3);
 }
 
