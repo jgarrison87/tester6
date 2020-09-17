@@ -92,14 +92,26 @@ nav {
   z-index: -1;
 }
 
+.showcase .cover {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  opacity: .4;
+  z-index: -1;
+}
+
 .become-showcase {
-  width: 600px;
+  position: absolute;
+  width: 1500px;
   max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-right: 120px;
+  z-index: 5;
+  opacity: 1;
 }
 
 .become-showcase p {
