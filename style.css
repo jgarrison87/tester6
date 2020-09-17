@@ -164,6 +164,7 @@ html {
   height: 500px;
   justify-content: center;
   align-items: center;
+  padding: 10px 50px;
 }
 
 /* carousel */
@@ -217,6 +218,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
+  padding: 10px 50px;
 }
 
 .products-container .products-text p a {
@@ -274,7 +276,7 @@ html {
 
 /* footer */
 footer {
-  background-color: #6d6d6d;
+  background-color: #454545;
   display: flex;
   flex-direction: column;
 }
@@ -294,7 +296,7 @@ footer .footer-social .community {
 }
 
 footer .footer-social .community h2 {
-  color: #32e0c4;
+  color: var(--color-3);
   font-size: 30px;
 }
 
@@ -324,7 +326,7 @@ footer .footer-social .email {
 }
 
 footer .footer-social .email h2 {
-  color: #32e0c4;
+  color: var(--color-3);
   font-size: 30px;
 }
 
@@ -518,7 +520,7 @@ p {
     height: 100vh;
     width: 100%;
   }
-
+  
   .showcase .showcase-container {
     display: flex;
     flex-direction: column;
@@ -528,16 +530,16 @@ p {
     line-height: 1;
     margin-top: 75px;
   }
-
+  
   .showcase .showcase-container h1 {
     font-size: 2rem;
     margin-top: 450px;
   }
-
+  
   .showcase .showcase-container h2 {
     font-size: 1.6rem;
   }
-
+  
   .showcase .showcase-container button {
     height: 40px;
     width: 100px;
@@ -546,7 +548,7 @@ p {
     border-radius: 5px;
     background-color: var(--color-3);
   }
-
+  
   /* cards */
   .card-container {
     display: flex;
