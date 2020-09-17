@@ -60,8 +60,22 @@ nav {
   cursor: pointer;
 }
 
-.navbar .nav-items .nav-item a:hover {
+/* .navbar .nav-items .nav-item a:hover {
   color: var(--color-3);
+} */
+
+.navbar .nav-items a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-3);
+  transition: width 0.4s;
+}
+
+.navbar .nav-items a:hover::after {
+  width: 100%;
+  transition: width 0.4s;
 }
 
 /* showcase */
@@ -75,6 +89,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: -1;
 }
 
 .become-showcase {
@@ -157,11 +172,12 @@ nav {
   background-color: var(--color-3);
   outline: none;
   border: none;
+  color: #fff;
 }
 
 .count-me-in .count-me-in-text button:hover {
   cursor: pointer;
-  color: #fff;
+  background-color: var(--primary-color);
 }
 
 .count-me-in .count-me-in-text button:visited {
@@ -179,17 +195,7 @@ nav {
   height: 80vh;
   background-color: #2a2a2a;
   color: #fff;
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
-}
-
-.get-started.visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+  overflow: hidden;
 }
 
 .get-started .get-started-text {
@@ -224,11 +230,12 @@ nav {
   background-color: var(--color-3);
   outline: none;
   border: none;
+  color: #fff;
 }
 
 .get-started .get-started-text button:hover {
   cursor: pointer;
-  color: #fff;
+  background-color: var(--primary-color);
 }
 
 .get-started .get-started-text button:visited {
@@ -253,7 +260,260 @@ nav {
 .live-better p {
   text-align: center;
   font-size: 24px;
-  padding: 50px 100px;
+  padding: 15px 100px;
+}
+
+/* story */
+.story-header {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 100px;
+  max-width: 1200px;
+  margin: auto;
+  width: 80%;
+  padding: 80px 0px;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 75px;
+  grid-column-gap: 25px ;
+  width: 100%;
+}
+
+.story-grid-item {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.story-grid-item h2 {
+  color: var(--color-3);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.story-grid-item p  {
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* 15 Points of Failure */
+
+.points-container {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.points-container h2 {
+  margin: 50px auto 10px;
+  font-size: 48px;
+}
+
+.points-container img {
+  height: 700px;
+  width: 700px;
+  margin: 50px auto;
+}
+
+.points-container .points-text {
+  width: 70%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.points-text p {
+  font-size: 24px;
+}
+
+.points-text button {
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-3);
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+  box-shadow: 0px 5px 10px var(--secondary-color) ;
+}
+
+.points-text button:hover {
+  background-color: var(--primary-color);
+}
+
+/* pricing and info */
+.pricing-container {
+  height: 150vh;
+  padding: 10px 40px 10px 80px;
+  display: flex;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.pricing-container img {
+  width: 800px;
+}
+
+.pricing-container .pricing-text {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  height: 70%;
+  width: 800px;
+  position: relative;
+  top: 150px;
+  right: 70px;
+  z-index: 5;
+}
+
+.pricing-text h2 {
+  color: var(--color-3);
+  font-size: 40px;
+  padding: 40px 20px 20px;;
+}
+
+.pricing-text p {
+  font-size: 18px;
+  padding: 20px 30px;
+  line-height: 30px;
+}
+
+.pricing-text p a {
+  color: #fff;
+  cursor: pointer;
+}
+
+.pricing-text button {
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-3);
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+  box-shadow: 0px 10px 20px var(--secondary-color) ;
+}
+
+.pricing-text button:hover {
+  background-color: var(--primary-color)
+}
+
+.pricing-text button:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* closing section */
+.closing-container {
+  /* height: 150vh; */
+  padding: 75px 250px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.closing-container .closing-header {
+  padding-bottom: 50px;
+  font-size: 24px;
+  border-bottom: 2px solid #000;
+}
+
+.closing-container .closing-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.closing-container .closing-header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 50px;
+  height: 400px;
+  padding-top: 50px;
+}
+
+.icon-container .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-container .icon i {
+  color: var(--primary-color)
+}
+
+.icon-container .icon h3 {
+  font-size: 20px;
+}
+
+.closing-container button {
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-3);
+  outline: none;
+  border: none;
+  margin: 100px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+  box-shadow: 0px 10px 20px var(--secondary-color) ;
+}
+
+.closing-container button:hover {
+  background-color: var(--primary-color)
+}
+
+.closing-container button:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.closing-container h1 {
+  font-size: 48px;
+  padding: 50px 100px 100px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.image img {
+  height: 400px;
+  width: 400px;
+}
+
+.closing-image {
+  margin: 75px 50px 25px;
 }
 
 /* footer */
