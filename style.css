@@ -241,38 +241,99 @@ html {
 }
 
 /* cards */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* background-color: #f6f6f6; */
+.community-card {
+  background-color:#fff;
+  margin: 100px 200px;
+  padding: 100px;
+  box-shadow: 0px 10px 30px #454545;
 }
 
-.card-container .card {
-  margin: 50px 30px;
-  border: 0;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+.community-top {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card-container .card img {
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-  height: 500px;
-  margin: 50px 50px 0px;
+.community-top .card {
+  position: relative;
+  height: 300px;
+  width: 500px;
 }
 
-.card-container .card p {
-  width: 50%;
-  margin: auto;
-  text-align: center;
+.card {
+  position: relative;
 }
 
-.card-container .card p {
-  margin: 20px auto;
+.card img {
+  height: 100%;
 }
 
-.card-container .card img:hover {
+.card img:hover {
+  opacity: .8;
+}
+
+.card .card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+}
+
+.card .card-text:hover {
   cursor: pointer;
-  opacity: 0.6;
 }
+
+.community-bottom {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-bottom .card {
+  position: relative;
+  height: 300px;
+  width: 500px;
+}
+
+.community-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.community-center button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: var(--color-3);
+  background-color: #fff;
+  outline: none;
+  border: 2px solid var(--color-3)
+}
+
+.community-center button:hover {
+  background-color: var(--color-3);
+  text-decoration: none;
+  color: #fff;
+}
+
+.community-center button:visited {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+
 
 /* footer */
 footer {
