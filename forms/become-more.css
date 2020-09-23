@@ -139,6 +139,206 @@ nav {
   cursor: pointer;
 }
 
+/* email modal */
+.email-modal-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(200, 200, 200, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibilty 0.2s, opacity 0.5s;
+  z-index: 10;
+}
+
+.email-modal-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.email-modal {
+  position: relative;
+  background-color: #000;
+  height: 35%;
+  max-height: 400px;
+  width: 70%;
+  max-width: 800px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.email-modal h1 {
+  font-size: 36px;
+  padding: 20px 10px 15px;
+  color: var(--color-3)
+}
+
+.email-modal p {
+  font-size: 18px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+.email-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-modal form input {
+  height: 40px;
+  font-size: 22px;
+  padding-left: 5px;
+  width: 500px;
+  outline: none;
+}
+
+.email-modal form button {
+  background-color: var(--color-3);
+  color: #fff;
+  width: 500px;
+  padding: 10px;
+  transition: background-color 0.5s;
+  outline: none;
+  border: none;
+}
+
+.email-modal form button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.email-modal span {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 12px ;
+  border-radius: 50%;
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.email-modal span:hover {
+  background-color: rgba(150, 150, 150, 0.8);
+}
+
+/* cta modal */
+.cta-modal-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: visibilty 0.2s, opacity 0.5s;
+}
+
+.cta-modal-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cta-modal {
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cta-modal h1 {
+  font-size: 32px;
+  padding: 20px;
+}
+
+.cta-modal p {
+  font-size: 24px;
+}
+
+.cta-modal span {
+  color: red;
+}
+
+.cta-modal form {
+  display: flex;
+  flex-direction: column;  
+  width: 500px;
+  padding: 30px;
+}
+
+.cta-modal form label {
+  font-size: 20px;
+  padding: 10px 0px;
+  text-align: left;
+}
+
+.cta-modal form input {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px;
+}
+
+#interests {
+  height: 30px;
+  font-size: 14px;
+}
+
+form .cta-submit {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: var(--color-3);
+  color: #fff;
+  outline: none;
+  border: none;
+  transition: background-color .5s;
+}
+
+form .cta-submit:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.cta-modal .cta-modal-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 12px ;
+  border-radius: 50%;
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.cta-modal .cta-modal-close:hover {
+  background-color: rgba(150, 150, 150, 0.8);
+}
+
+
 /* Count Me In */
 .count-me-in {
   display: grid;
