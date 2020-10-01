@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #32e0c4;
+  --secondary-color: #393e46;
+  --color-3: #1cbba1;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  background-color: #000;
+}
+
+.navbar {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 300px 0px 50px;
+  color: #fff;
+}
+
+.navbar .nav-brand {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.navbar .nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  font-size: 18px;
+}
+
+.navbar .nav-items a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .nav-items a:hover {
+  cursor: pointer;
+}
+
+.navbar .nav-items a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-3);
+  transition: width 0.4s;
+}
+
+.navbar .nav-items a:hover::after {
+  width: 100%;
+  transition: width 0.4s;
+}
+
+/* showcase */
+.showcase {
+  background: url(../img/card3.jpg) no-repeat center center/cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 70vh;
+}
+
+.showcase .cover {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-color: #000;
+  opacity: .4;
+}
+
+.performance-showcase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.performance-showcase h1 {
+  font-size: 4.5rem;
+  color: #fff;
+  font-weight: lighter;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+
+.performance-showcase p {
+  color: #fff;
+  font-size: 2rem;
+  margin: 50px auto;
+}
+
+.performance-showcase .performance-btn {
+  padding: 20px 100px;
+  outline: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.showcase .performance-showcase .performance-btn:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+

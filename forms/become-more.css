@@ -163,7 +163,7 @@ nav {
 
 .email-modal {
   position: relative;
-  background-color: #000;
+  background-image: linear-gradient(#000, teal, #000);
   height: 35%;
   max-height: 400px;
   width: 70%;
@@ -178,9 +178,12 @@ nav {
 .email-modal h1 {
   font-size: 36px;
   padding: 20px 10px 15px;
-  color: var(--color-3)
+  color: #fff;
 }
 
+.email-modal h1 span {
+  color: var(--primary-color);
+}
 .email-modal p {
   font-size: 18px;
   padding-bottom: 30px;
@@ -217,7 +220,7 @@ nav {
   background-color: var(--primary-color);
 }
 
-.email-modal span {
+.email-modal .email-modal-close {
   position: absolute;
   top: -15px;
   right: -15px;
