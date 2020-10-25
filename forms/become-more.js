@@ -26,19 +26,20 @@ const ctaCloseBtn = document.querySelector(".cta-modal-close");
 
 // email modal
 submitBtn.addEventListener('click', () => {
-  document.getElementById("email-modal-bg").classList.remove("email-modal-active");
+  document.getElementById("email-modal-bg").classList.remove("email-modal-bg-active");
 });
 
 closeBtn.addEventListener('click', () => {
-  document.getElementById("email-modal-bg").classList.remove("email-modal-active");
+  document.getElementById("email-modal-bg").classList.remove("email-modal-bg-active");
 });
 
 
-function modalOpen10() {
-  document.getElementById("email-modal-bg").classList.add("email-modal-active");
+function modalOpen5() {
+  document.getElementById("email-modal-bg").classList.add("email-modal-bg-active");
+  document.getElementById("email-modal").classList.add("email-modal-active");
 }
 
-setTimeout("modalOpen10()", 10000);
+setTimeout("modalOpen5()", 5000);
 
 // cta modal
 ctaSubmitBtn.addEventListener('click', () => {
