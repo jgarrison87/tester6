@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
   --primary-color: #32e0c4;
@@ -7,6 +8,13 @@
   --color-3: #1cbba1;
   --success-color: #2ecc71;
   --error-color: #e74c3c;
+  --orange: rgb(250, 176, 94);
+  --teal: rgb(108, 223, 204);
+  --purple: #a383d2;  
+  --green: rgb(143, 207, 160);
+  --yellow: #fec24a;
+  --red: #e35151;
+  --blue: #b0e1e5;
 }
 
 * {
@@ -60,10 +68,11 @@ html {
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background-color: var(--color-3);
+  background-color: rgb(108, 223, 204);
   color: #fff;
   outline: none;
   padding: 5px;
+  cursor: pointer;
 }
 
 .challenge button a {
@@ -79,7 +88,6 @@ html {
 .navbar .challenge p {
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .navbar .nav-item a::after {
@@ -96,11 +104,6 @@ html {
   transition: width 0.4s;
 }
 
-.navbar .challenge button:hover {
-  cursor: pointer;
-  background-color: var(--primary-color);
-}
-
 .navbar .challenge:hover p {
   position: absolute;
   right: 20px;
@@ -112,6 +115,44 @@ html {
   transition: opacity 0.5s ease-in-out;
 }
 
+nav .learn-more {
+  position: absolute;
+  top: 600px;
+  right: 40px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .learn-more .learn-btn {
+  background-color: transparent;
+  border: none;
+}
+
+nav .learn-btn a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav .learn-btn span {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 0px 5px 10px #808080;
+}
+
+nav .learn-btn span:hover {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-shadow: 0px 5px 10px #000;
+  transition: text-shadow .2s ease-in;
+}
+
+nav .learn-more p {
+  font-size: 12px;
+  font-weight: bold;
+}
 /* showcase */
 .showcase {
   background: url("./img/img6.jpg") no-repeat center center/cover;
@@ -137,24 +178,6 @@ html {
   font-size: 2.5rem;
 }
 
-.showcase .showcase-container button {
-  height: 40px;
-  width: 100px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color-3);
-}
-
-.showcase .showcase-container button a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.showcase .showcase-container button:hover {
-  cursor: pointer;
-  background-color: var(--primary-color);
-}
 
 /* testimonials */
 .testimonials-container {
@@ -240,12 +263,168 @@ html {
   text-align: center;
 }
 
+/* Join Us */
+.join-header {
+  text-align: center;
+  margin: 50px auto;
+  color: var(--color-3);
+}
+#slider {
+  position: relative;
+  width: 50%;
+  height: 30vw;
+  margin: 80px auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+input[type=radio] {
+  position: relative;
+  top: 108%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+}
+
+
+input[type=radio]:nth-child(5) {
+  margin-right: 0px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
+
+
+
+
+#slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 400ms ease;
+}
+
+#slide1 {
+  background-image: url(./img/join-us1.jpg);
+  background-position: center;
+  background-size: 470px;
+  background-repeat: no-repeat;
+  background-color: #b0e1e5;
+}
+
+#slide2 {
+  background-image: url(./img/join-us2.jpg);
+  background-position: center;
+  background-size: 470px;
+  background-repeat: no-repeat;
+  background-color: #fec24a;
+}
+
+#slide3 {
+  background-image: url(./img/join-us3.jpg);
+  background-position: center;
+  background-size: 470px;
+  background-repeat: no-repeat;
+  background-color: #e35151;
+}
+
+#slide4 {
+  background-image: url(./img/join-us4.jpg);
+  background-position: center;
+  background-size: 470px;
+  background-repeat: no-repeat;
+  background-color: #a383d2;
+}
+
+#slide5 {
+  background-image: url(./img/join-us5.jpg);
+  background-position: center;
+  background-size: 470px;
+  background-repeat: no-repeat;
+  background-color: var(--teal);
+}
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(30%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-30%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+.join-us .join-btn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--color-3);
+  outline: none;
+  border: none;
+}
+
+.join-us .join-btn a {
+  text-decoration: none;
+}
+
+.join-us .join-btn:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.join-us .join-btn a:visited {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
 /* cards */
 .community-card {
   background-color:#fff;
   margin: 100px 200px;
   padding: 100px;
-  box-shadow: 0px 10px 30px #f4f4f4;
+  box-shadow: 0px 10px 30px #c1c1c1;
 }
 
 .community-top {
@@ -260,6 +439,7 @@ html {
   position: relative;
   height: 300px;
   width: 500px;
+  border: none;
 }
 
 .card {
@@ -310,6 +490,7 @@ html {
   position: relative;
   height: 300px;
   width: 500px;
+  border: none;
 }
 
 .community-center {
@@ -318,6 +499,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 50px;
+  text-align: center;
 }
 
 .community-center button {
@@ -347,7 +529,7 @@ html {
 
 /* footer */
 footer {
-  background-color: #454545;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
 }
@@ -367,12 +549,12 @@ footer .footer-social .community {
 }
 
 footer .footer-social .community h2 {
-  color: var(--color-3);
+  color: #fff;
   font-size: 30px;
 }
 
 footer .footer-social .community i {
-  border: 1.5px solid #000;
+  border: 1.5px solid var(--secondary-color);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -397,7 +579,7 @@ footer .footer-social .email {
 }
 
 footer .footer-social .email h2 {
-  color: var(--color-3);
+  color: #fff;
   font-size: 30px;
 }
 
@@ -444,7 +626,7 @@ footer .footer-contact .contact-item {
 }
 
 footer .footer-contact .contact-item a {
-  color: var(--color-3);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -455,8 +637,8 @@ footer .footer-contact .contact-item h1 {
 }
 
 footer .footer-contact .contact-item a:hover {
-  border-bottom: 1.5px solid var(--primary-color);
-  color: var(--primary-color);
+  border-bottom: 1.5px solid var(--secondary-color);
+  font-weight: bold;
 }
 
 /* copyright */
@@ -470,120 +652,111 @@ footer .copyright h2 {
   font-size: 1rem;
 }
 
-/* modal */
-.modal-container {
-  background-color: rgba(0, 0, 0, 0.7);
+/* email modal */
+.email-modal-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
+  background-color: rgba(200, 200, 200, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.7s;
+  transition: visibilty 0.2s, opacity 0.5s;
+  z-index: 100;
 }
 
-.bg-active {
+.email-modal-bg-active {
+  visibility: visible;
   opacity: 1;
-  visibility: visible;
 }
 
-.modal-close {
+.email-modal {
   position: absolute;
-  top: 190px;
-  right: 470px;
-  font-size: 24px;
-  color: #000;
-  font-weight: bold;
-  padding: 2px 10px;
-  border-radius: 50%;
-}
-
-.modal-close:hover {
-  cursor: pointer;
-}
-
-.modal-container .modal-form h2 {
-  text-align: center;
-  margin: 0 0 20px;
-  color: var(--color-3);
-}
-
-p {
-  text-align: center;
-  margin: 0 0 20px;
-}
-
-.modal-form {
-  padding: 30px 40px;
-  height: 50%;
-  width: 40%;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
-.formControl {
-  padding-bottom: 20px;
-  position: relative;
-  border: none;
-}
-
-.formControl label {
-  color: #000;
-  display: block;
-  margin: 20px 0px 5px 0px;
-}
-
-.formControl input {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
+  background-color: var(--secondary-color);
+  top: 120vh;
+  height: 200px;
   width: 100%;
-  padding: 10px;
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease-in-out;
 }
 
-.formControl input:focus {
-  outline: 0;
-  border-color: #777;
+.email-modal-active {
+  transform: translateY(-45vh);
 }
 
-.formControl.success input {
-  border-color: var(--success-color);
-}
-
-.formControl.error input {
-  border-color: var(--error-color);
-}
-
-.formControl small {
-  color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.formControl.error small {
-  visibility: visible;
-}
-
-.modal-form button {
-  cursor: pointer;
-  background-color: var(--color-3);
-  border: none;
-  border-radius: 4px;
+.email-modal .email-form h1 {
+  font-size: 20px;
+  padding: 0px 10px;
   color: #fff;
-  display: block;
+  text-align: center;
+}
+
+.email-modal h1 span {
+  color: var(--primary-color);
+}
+.email-modal p {
+  text-align: center;
   font-size: 16px;
   padding: 10px;
-  margin-top: 20px;
-  width: 100%;
+  color: #fff;
 }
+
+.email-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.email-modal form input {
+  height: 40px;
+  font-size: 16px;
+  padding-left: 5px;
+  width: 500px;
+  outline: none;
+  background-color: var(--secondary-color);
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.email-modal form input::placeholder {
+  color: #fff;
+}
+
+.email-modal form button {
+  background-color: var(--color-3);
+  color: #fff;
+  width: 500px;
+  padding: 10px;
+  transition: background-color 0.5s;
+  outline: none;
+  border: none;
+}
+
+.email-modal form button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.email-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 @media (max-width: 600px) {
   .showcase {

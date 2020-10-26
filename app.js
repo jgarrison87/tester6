@@ -9,6 +9,8 @@ const modalClose = document.querySelector(".modal-close");
 const showcaseBtn = document.querySelector(".showcase-btn");
 const discountContainer = document.querySelector(".discount-container");
 const discountCloseBtn = document.querySelector(".discount-modal-close");
+const closeBtn = document.querySelector(".email-modal-close");
+const submitBtn = document.querySelector(".submit");
 
 // show modal
 // window.addEventListener("scroll", () => {
@@ -106,3 +108,39 @@ form.addEventListener("submit", function (e) {
   checkEmail(email);
   // checkPasswordsMatch(password, password2);
 });
+
+// swiper
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
+// email modal
+
+submitBtn.addEventListener('click', () => {
+  document.getElementById("email-modal-bg").classList.remove("email-modal-bg-active");
+});
+
+closeBtn.addEventListener('click', () => {
+  document.getElementById("email-modal-bg").classList.remove("email-modal-bg-active");
+});
+
+
+function modalOpen5() {
+  document.getElementById("email-modal-bg").classList.add("email-modal-bg-active");
+  document.getElementById("email-modal").classList.add("email-modal-active");
+}
+
+setTimeout("modalOpen5()", 5000);

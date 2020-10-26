@@ -7,7 +7,10 @@
   <!-- style sheet -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="./forms/discount.css" />
+  <!-- aos -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- bootstrap -->
   <link
   rel="stylesheet"
@@ -111,6 +114,10 @@
   </button>
 </form> -->
 </div>
+<div class="learn-more" data-aos="fade-down">
+  <button class="learn-btn"><a href="#"><span>X</span></a></button>
+  <p data-aos="fade-left">I WANT IN</p>
+</div>
 </nav>
 
 <!-- showcase -->
@@ -118,7 +125,6 @@
   <div class="showcase-container">
     <h1 data-aos="fade-down">Experience the future of health</h1>
     <h2 data-aos="fade-down">Order today and get started!</h2>
-    <button class="showcase-btn" data-aos="fade-up"><a href="#">Lets Go!</a></button>
   </div>
 </section>
 
@@ -213,7 +219,7 @@
       products that work, easy to follow diet suggestions, and simple
       exercise options. Don’t wait any longer to start to feel, look, and
       live better.
-      <a href="http://bit.ly/findyourfitxyngular"
+      <a target="_blank" href="http://bit.ly/findyourfitxyngular"
       ><u><strong>Checkout</strong></u></a
       >
       our products and get started now!
@@ -229,18 +235,40 @@
   </div>
 </div>
 
+<!-- Join Us -->
+<section class="join-us">
+  <div class="join-header">
+    <h1>Join the Family!</h1>
+  </div>
+  <div id="slider">
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+    <input type="radio" name="slider" id="s4">
+    <input type="radio" name="slider" id="s5">
+  
+    <label for="s1" id="slide1"></label>
+    <label for="s2" id="slide2"></label>
+    <label for="s3" id="slide3"></label>
+    <label for="s4" id="slide4"></label>
+    <label for="s5" id="slide5"></label>
+  </div>
+  <button class="join-btn" data-aos="fade-up"><a href="./cards/wealth.html">LEARN MORE</a></button>
+</section>
+
+
 <!-- cards -->
 <section>
   <div class="community-card">
     <div class="community-top">      
       <div class="card performance">
-        <img src="./img/card1.jpg" alt="">
+        <img src="./img/performance-bg.jpg" alt="" data-aos="fade-right">
         <div class="card-text">
-          <a href="./cards/performance.html"><h2>Performance</h2></a>
+          <a href="./cards/energy.html"><h2>Energy</h2></a>
         </div>
       </div>
       <div class="card weight">
-        <img src="./img/card22.jpg" alt="">
+        <img src="./img/weight-loss-bg.jpg" alt="" data-aos="fade-left">
         <div class="card-text">
           <a href="./cards/weight-loss.html"><h2>Weight Loss</h2></a>         
         </div>
@@ -249,19 +277,20 @@
     
     <div class="community-center">
       <h1><strong>COMMUNITY</strong></h1>
-      <h3>Life Changing Opportunity | Products That Work | Feel, Look, And Live Better</h3>
+      <h3>Life Changing Opportunity | Products That Work 
+        <br> Feel, Look, And Live Better</h3>
       <button>Sign Up</button>
     </div>
     
     <div class="community-bottom">      
       <div class="card health">
-        <img src="./img/card3.jpg" alt="">
+        <img src="./img/become-more-bg2.jpg" alt="" data-aos="fade-right">
         <div class="card-text">
-          <a href="./cards/health.html"><h2>Health</h2></a>         
+          <a href="./forms/become-more.html"><h2>Health</h2></a>          
         </div>
       </div>
       <div class="card performance">
-        <img src="./img/card4.jpg" alt="">
+        <img src="./img/x-sunset.jpg" alt="" data-aos="fade-left">
         <div class="card-text">
           <a href="./cards/wealth.html"><h2>Wealth</h2></a>          
         </div>
@@ -269,55 +298,6 @@
     </div>
   </div>
 </section>
-
-<!-- modal -->
-<div class="modal-container">
-  <form id="modal-form" class="modal-form">
-    <h2>Join the Xyngular Team!</h2>
-    
-    <div class="formControl">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Enter Name" />
-      <small>Error message</small>
-    </div>
-    <div class="formControl">
-      <label for="email">Email</label>
-      <input type="text" id="email" placeholder="Enter Email" />
-      <small>Error message</small>
-    </div>
-    <!-- <div class="formControl">
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter password" />
-      <small>Error message</small>
-    </div>
-    <div class="formControl">
-      <label for="password2">Confirm Password</label>
-      <input
-      type="password"
-      id="password2"
-      placeholder="Enter password again"
-      />
-      <small>Error message</small>
-    </div> -->
-    <button type="submit">Submit</button>
-    <span class="modal-close">X</span>
-  </form>
-</div>
-
-<!-- discount modal -->
-<div class="discount-container">
-  <div class="discount-modal">
-    <div class="discount-bg">
-      <h1>Save 10% on your first order!</h1>
-      <p>And <em>stay</em> up to date on future promotions.</p>
-      <form>
-        <input type="text" placeholder="Enter email" /><br />
-        <button type="submit">SIGN UP</button>
-      </form>
-      <span class="discount-modal-close">X</span>
-    </div>
-  </div>
-</div>
 
 <!-- footer -->
 <footer>
@@ -382,6 +362,21 @@
   </div>
 </footer>
 
+<!-- email modal -->
+<div class="email-modal-bg" id="email-modal-bg">
+  <div id="email-modal" class="email-modal">
+    <div class="email-form">
+      <h1>Enjoy a complimentary approved foods list!</h1>
+      <p>And <em><u>stay</u></em> up to date on future promotions.</p>
+      <form>
+        <input type="text" placeholder="Enter Your Email" /><br />
+        <button class="submit" type="submit">SIGN UP</button>
+      </form>
+      <span class="email-modal-close">X</span>
+    </div>
+  </div>
+</div>
+
 <script
 src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -398,12 +393,30 @@ integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+
 crossorigin="anonymous"
 ></script>
 <script src="app.js"></script>
+<!-- aos -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
     offset: 200,
     duration: 800,
   });
-</script>
+  </script>
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+ });
+  </script>
 </body>
 </html>
